@@ -42,13 +42,17 @@ public class DbService {
     public void startDbPostgreSql() {
         Tecnico tecAdmin = new Tecnico(null, "Tiago Menegaz", "02150062917", "tmenegaz77@gmail.com", "280577T@m");
         tecAdmin.addPerfil(Perfil.ADMIN);
+        Tecnico tecProfessor = new Tecnico(null, "Alphonse Polin", "02150061234", "alphonsepolin@gmail.com", "280577T@m");
 
         Cliente clienteLPA = new Cliente(null, "Letícia Azevedo", "568.063.720-07", "leticiapazevedo@gmail.com", "123");
+        Cliente clienteSC = new Cliente(null, "Sinara Costa", "568.063.720-01", "sinaracosta@gmail.com", "123");
 
-        Processo processoBallet = new Processo(null, Modalidade.BALLET, Status.ATIVO, "Treinamento intermediário", "Escola Studio de Dança", clienteLPA, tecAdmin);
+        Processo processoBalletLPA = new Processo(null, Modalidade.BALLET, Status.ATIVO, "Treinamento intermediário", "Escola Studio de Dança", clienteLPA, tecAdmin);
+        Processo processoBalletSC = new Processo(null, Modalidade.BALLET, Status.ATIVO, "Treinamento avançado", "Escola Studio de Dança", clienteSC, tecProfessor);
+        Processo processoContempLPA = new Processo(null, Modalidade.CONTEMPORANEO, Status.ATIVO, "Treinamento avançado", "Escola Studio de Dança", clienteLPA, tecAdmin);
 
-        tecnicoRepository.saveAll(Arrays.asList(tecAdmin));
-        clienteRepository.saveAll(Arrays.asList(clienteLPA));
-        processoRepository.saveAll(Arrays.asList(processoBallet));
+        tecnicoRepository.saveAll(Arrays.asList(tecAdmin, tecProfessor));
+        clienteRepository.saveAll(Arrays.asList(clienteLPA, clienteSC));
+        processoRepository.saveAll(Arrays.asList(processoBalletLPA, processoBalletSC, processoContempLPA));
     }
 }

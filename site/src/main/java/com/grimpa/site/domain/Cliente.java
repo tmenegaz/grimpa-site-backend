@@ -1,5 +1,6 @@
 package com.grimpa.site.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.grimpa.site.domain.enums.Perfil;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
@@ -14,6 +15,7 @@ public class Cliente extends Pessoa {
     private static final long serialVersionUID = 1L;
 
     @OneToMany(mappedBy = "cliente")
+    @JsonIgnore
     private List<Processo> processos = new ArrayList<>();
 
     public Cliente() {
