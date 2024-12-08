@@ -1,23 +1,42 @@
 package com.grimpa.site.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.grimpa.site.domain.enums.Modalidade;
 import com.grimpa.site.domain.enums.Status;
+import jakarta.persistence.*;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Processo {
+@Entity
+public class Processo implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataInicio = LocalDate.now();
+
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataFim;
     private Modalidade modalidade;
     private Status status;
     private String titulo;
     private String observacao;
 
-    private Cliente cliente;
+    @ManyToOne
+    @JoinColumn(name = "tecnico_id")
     private Tecnico tecnico;
+
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Cliente cliente;
+
 
     public Processo() {
         super();

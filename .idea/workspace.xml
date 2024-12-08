@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5122779c-f66c-4da9-b9ca-b1f2650e7022" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Pessoa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Processo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Tecnico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/site/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/enums/Perfil.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/enums/Perfil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Processo.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Processo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Tecnico.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Tecnico.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +60,7 @@
     "Application.SiteApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "2-back---criar-a-classe-Pessoa",
+    "git-widget-placeholder": "3-back---criar-as-tabelas-das-entidades",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
