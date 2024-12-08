@@ -5,6 +5,7 @@
 * N/A
 
 ### Nova funcionalidade
+* [SITE-12]{https://github.com/tmenegaz/grimpa-site-backend/issues/12#issue-2725282440} - Criar perfil de desenvolvimento
 * [SITE-04]{https://github.com/tmenegaz/grimpa-site-backend/issues/8#issue-2725214983} - Criar valores para a base de dados
 * [SITE-03]{https://github.com/tmenegaz/grimpa-site-backend/issues/4#issue-2724899778} - Criar as tabelas das entidades
 * [SITE-02]{https://github.com/tmenegaz/grimpa-site-backend/issues/2#issue-2724870952} - Criar a classe Pessoa
