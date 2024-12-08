@@ -19,12 +19,16 @@ public enum Perfil {
         this.codigo = codigo;
     }
 
-    public static Perfil toEnum(Integer codigo) throws IllegalAccessException {
+    public static Perfil toEnum(Integer codigo) {
         if (codigo == null) return null;
 
         for (Perfil perfil : Perfil.values()) {
             if (codigo.equals(perfil.getCodigo())) return perfil;
         }
-        throw new IllegalAccessException("Perfil inválido");
+        try {
+            throw new IllegalAccessException("Perfil inválido");
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
