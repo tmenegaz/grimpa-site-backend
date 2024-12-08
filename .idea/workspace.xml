@@ -5,12 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5122779c-f66c-4da9-b9ca-b1f2650e7022" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/repositories/ClienteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/repositories/PessoaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/repositories/ProcessoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/repositories/TecnicoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/site/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/SiteApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/SiteApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/resources/application.properties" afterDir="false" />
     </list>
@@ -44,9 +38,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2puRJjTElZBkxdb1004Rbu2Vq7s" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -63,7 +57,7 @@
     "Application.SiteApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "6-back---criar-a-carga-inicial-da-base-de-dados",
+    "git-widget-placeholder": "9-back-perfil-de-teste",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
