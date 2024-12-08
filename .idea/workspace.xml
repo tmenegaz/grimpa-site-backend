@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5122779c-f66c-4da9-b9ca-b1f2650e7022" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/config/TestConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/services/DbService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/src/main/resources/application-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/SiteApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/SiteApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/resources/application.properties" afterDir="false" />
     </list>
@@ -17,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -57,8 +61,9 @@
     "Application.SiteApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "2782ed65",
+    "git-widget-placeholder": "976c1854",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Work/grimpa/back/grimpa-site-backend/site/src/main/resources",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -66,6 +71,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Work\grimpa\back\grimpa-site-backend\site\src\main\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.grimpa.site.domain" />
     </key>
@@ -81,7 +89,7 @@
       <module name="site" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.grimpa.site.*" />
+          <option name="PATTERN" value="com.grimpa.site.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
