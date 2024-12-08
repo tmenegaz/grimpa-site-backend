@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5122779c-f66c-4da9-b9ca-b1f2650e7022" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/repositories/ClienteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/repositories/PessoaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/repositories/ProcessoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/repositories/TecnicoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/site/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Processo.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Processo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Tecnico.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Tecnico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/SiteApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/SiteApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +24,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -60,7 +63,7 @@
     "Application.SiteApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "3-back---criar-as-tabelas-das-entidades",
+    "git-widget-placeholder": "6-back---criar-a-carga-inicial-da-base-de-dados",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
@@ -73,6 +76,7 @@
       <recent name="com.grimpa.site.domain" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.grimpa.site.repositories" />
       <recent name="com.grimpa.site.domain" />
       <recent name="com.grimpa.site.domain.enums" />
     </key>
