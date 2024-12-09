@@ -1,55 +1,56 @@
-package com.grimpa.site.domain;
+package com.grimpa.site.domain.dtos;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.grimpa.site.domain.Tecnico;
 import com.grimpa.site.domain.enums.Perfil;
-import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.br.CPF;
 
-import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@Entity
-public abstract class Pessoa implements Serializable {
-    @Serial
+public class TecnicoDto implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Integer id;
+
+    @NotNull(message = "O campo NOME é requerido")
     protected String nome;
 
-    @Column(unique = true)
+    @NotNull(message = "O campo CPF é requerido")
+    @CPF
     protected String cpf;
 
-    @Column(unique = true)
+    @NotNull(message = "O campo E-MAIL é requerido")
+    @Email
     protected String email;
 
+    @NotNull(message = "O campo SENHA é requerido")
     protected String senha;
 
-    @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "PERFIS")
     protected Set<Integer> perfis = new HashSet<>();
 
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     protected LocalDate dataCriacao = LocalDate.now();
 
-    public Pessoa() {
+    public TecnicoDto() {
         super();
         addPerfil(Perfil.CLIENTE);
     }
 
-    public Pessoa(Integer id, String nome, String cpf, String email, String senha) {
-        this.id = id;
-        this.nome = nome;
-        this.cpf = cpf;
-        this.email = email;
-        this.senha = senha;
+    public TecnicoDto(Tecnico tecnico) {
+        super();
+        this.id = tecnico.getId();
+        this.nome = tecnico.getNome();
+        this.cpf = tecnico.getCpf();
+        this.email = tecnico.getEmail();
+        this.senha = tecnico.getSenha();
+        this.perfis = tecnico.getPerfis().stream().map(Perfil::getCodigo).collect(Collectors.toSet());
+        this.dataCriacao = tecnico.getDataCriacao();
         addPerfil(Perfil.CLIENTE);
     }
 
@@ -107,17 +108,5 @@ public abstract class Pessoa implements Serializable {
 
     public void setDataCriacao(LocalDate dataCriacao) {
         this.dataCriacao = dataCriacao;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Pessoa pessoa)) return false;
-        return Objects.equals(getId(), pessoa.getId()) && Objects.equals(getCpf(), pessoa.getCpf());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId(), getCpf());
     }
 }
