@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5122779c-f66c-4da9-b9ca-b1f2650e7022" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/dtos/TecnicoDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/resources/exceptions/FieldMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/resources/exceptions/ResourceExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/resources/exceptions/StandardError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/resources/exceptions/ValidationError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/services/exceptions/DataIntegrityViolationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/services/exceptions/ObjectNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/dtos/ClienteDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/resources/ClienteResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/services/ClienteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Tecnico.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Tecnico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/repositories/PessoaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/repositories/PessoaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/repositories/TecnicoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/repositories/TecnicoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/resources/TecnicoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/resources/TecnicoResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/services/DbService.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/services/DbService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/services/TecnicoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/services/TecnicoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +60,7 @@
     "Application.SiteApplication.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "13-back-criar-api-tecnicos",
+    "git-widget-placeholder": "14-back-criar-crud-para-cleinte",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Work/grimpa/back/grimpa-site-backend/site/src/main/resources",
     "project.structure.last.edited": "Project",
@@ -88,11 +77,11 @@
       <recent name="com.grimpa.site.domain" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.grimpa.site.resources.exceptions" />
+      <recent name="com.grimpa.site.resources" />
+      <recent name="com.grimpa.site.domain.dtos" />
       <recent name="com.grimpa.site.services.exceptions" />
+      <recent name="com.grimpa.site.resources.exceptions" />
       <recent name="com.grimpa.site.config" />
-      <recent name="com.grimpa.site.repositories" />
-      <recent name="com.grimpa.site.domain" />
     </key>
   </component>
   <component name="RunManager">
