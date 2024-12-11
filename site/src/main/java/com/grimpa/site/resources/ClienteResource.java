@@ -21,21 +21,21 @@ public class ClienteResource {
     private ClienteService service;
 
     @PostMapping
-    public ResponseEntity<ClienteDto> create(@Valid @RequestBody ClienteDto tecnicoDto) {
-        Cliente cliente = service.create(tecnicoDto);
+    public ResponseEntity<ClienteDto> create(@Valid @RequestBody ClienteDto clienteDto) {
+        Cliente cliente = service.create(clienteDto);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{id}").buildAndExpand(cliente.getId()).toUri();
         return ResponseEntity.created(uri).build();
     }
 
     @PutMapping(value = "/{id}")
-    public ResponseEntity<ClienteDto> update(@PathVariable Integer id, @RequestBody ClienteDto tecnicoDto ) {
-        Cliente tecnico = service.update(id, tecnicoDto);
-        return ResponseEntity.ok().body(new ClienteDto(tecnico));
+    public ResponseEntity<ClienteDto> update(@PathVariable Integer id, @RequestBody ClienteDto clienteDto ) {
+        Cliente cliente = service.update(id, clienteDto);
+        return ResponseEntity.ok().body(new ClienteDto(cliente));
     }
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<ClienteDto> findById(@PathVariable Integer id) {
-        Cliente tecnico = service.findById(id);
+        Cliente cliente = service.findById(id);
         return ResponseEntity.ok().body(new ClienteDto(tecnico));
     }
 
