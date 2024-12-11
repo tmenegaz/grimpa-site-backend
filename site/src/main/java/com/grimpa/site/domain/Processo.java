@@ -2,6 +2,7 @@ package com.grimpa.site.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.grimpa.site.domain.dtos.ProcessoDto;
 import com.grimpa.site.domain.enums.Modalidade;
 import com.grimpa.site.domain.enums.Status;
 import jakarta.persistence.*;

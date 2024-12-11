@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5122779c-f66c-4da9-b9ca-b1f2650e7022" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/dtos/ClienteDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/resources/ClienteResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/services/ClienteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/dtos/ProcessoDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/resources/ProcessoResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/services/ProcessoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Processo.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/domain/Processo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/resources/ClienteResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/java/com/grimpa/site/resources/ClienteResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main/resources/application-dev.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,13 +64,13 @@
     "Application.SiteApplication.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "14-back-criar-crud-para-cleinte",
+    "git-widget-placeholder": "15-back---criar-findbyid",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Work/grimpa/back/grimpa-site-backend/site/src/main/resources",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -77,8 +81,8 @@
       <recent name="com.grimpa.site.domain" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.grimpa.site.resources" />
       <recent name="com.grimpa.site.domain.dtos" />
+      <recent name="com.grimpa.site.resources" />
       <recent name="com.grimpa.site.services.exceptions" />
       <recent name="com.grimpa.site.resources.exceptions" />
       <recent name="com.grimpa.site.config" />
