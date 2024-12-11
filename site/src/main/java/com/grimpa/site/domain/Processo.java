@@ -1,8 +1,6 @@
 package com.grimpa.site.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.grimpa.site.domain.dtos.ProcessoDto;
 import com.grimpa.site.domain.enums.Modalidade;
 import com.grimpa.site.domain.enums.Status;
 import jakarta.persistence.*;
@@ -52,6 +50,26 @@ public class Processo implements Serializable {
         this.observacao = observacao;
         this.cliente = cliente;
         this.tecnico = tecnico;
+    }
+
+    public Processo toModalidadeProcesso(Integer modalidade) {
+        Processo processo = new Processo();
+        try {
+            processo.setModalidade(Modalidade.toEnum(modalidade));
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+        return processo;
+    }
+
+    public Processo toStatusProcesso(Integer status) {
+        Processo processo = new Processo();
+        try {
+            processo.setStatus(Status.toEnum(status));
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+        return processo;
     }
 
     public Integer getId() {

@@ -7,6 +7,7 @@ import com.grimpa.site.domain.Tecnico;
 import com.grimpa.site.domain.enums.Modalidade;
 import com.grimpa.site.domain.enums.Status;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -18,11 +19,14 @@ public class ProcessoDto implements Serializable {
 
     private Integer id;
 
+    @NotNull(message = "O campo DATA INICIO é requerido")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private LocalDate dataInicio = LocalDate.now();
 
+    @NotNull(message = "O campo DATA FIM é requerido")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private LocalDate dataFim;
+
     private Integer modalidade;
     private Integer status;
 
@@ -53,6 +57,18 @@ public class ProcessoDto implements Serializable {
         this.nomeCliente = processo.getCliente().getNome();
     }
 
+    public ProcessoDto toModalidadeProcessoDto(Modalidade modalidade) {
+        ProcessoDto processoDto = new ProcessoDto();
+            processoDto.setModalidade(modalidade.getCodigo());
+        return processoDto;
+    }
+
+    public ProcessoDto toStatusProcessoDto(Status status) {
+        ProcessoDto processoDto = new ProcessoDto();
+            processoDto.setStatus(status.getCodigo());
+        return processoDto;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -61,19 +77,19 @@ public class ProcessoDto implements Serializable {
         this.id = id;
     }
 
-    public LocalDate getDataInicio() {
+    public @NotNull(message = "O campo DATA INICIO é requerido") LocalDate getDataInicio() {
         return dataInicio;
     }
 
-    public void setDataInicio(LocalDate dataInicio) {
+    public void setDataInicio(@NotNull(message = "O campo DATA INICIO é requerido") LocalDate dataInicio) {
         this.dataInicio = dataInicio;
     }
 
-    public LocalDate getDataFim() {
+    public @NotNull(message = "O campo DATA FIM é requerido") LocalDate getDataFim() {
         return dataFim;
     }
 
-    public void setDataFim(LocalDate dataFim) {
+    public void setDataFim(@NotNull(message = "O campo DATA FIM é requerido") LocalDate dataFim) {
         this.dataFim = dataFim;
     }
 

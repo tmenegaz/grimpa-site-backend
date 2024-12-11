@@ -22,7 +22,7 @@ public class ProcessoResource {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<ProcessoDto> findById(@PathVariable Integer id) {
-        Processo processo = service.findByID(id);
+        Processo processo = service.findById(id);
         return ResponseEntity.ok().body(new ProcessoDto(processo));
     }
 
@@ -37,5 +37,17 @@ public class ProcessoResource {
         Processo processo = service.create(processoDto);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{id}").buildAndExpand(processo.getId()).toUri();
         return ResponseEntity.created(uri).build();
+    }
+
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<ProcessoDto> update(@PathVariable Integer id, @RequestBody ProcessoDto processoDto) {
+        Processo processo = service.update(id, processoDto);
+        return ResponseEntity.ok().body(new ProcessoDto(processo));
+    }
+
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<ProcessoDto> delete(@PathVariable Integer id) {
+        service.delete(id);
+        return ResponseEntity.noContent().build();
     }
 }

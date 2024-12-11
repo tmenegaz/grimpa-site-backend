@@ -28,7 +28,7 @@ public class ProcessoService {
     @Autowired
     private TecnicoRepository tecnicoRepository;
 
-    public Processo findByID(Integer id) {
+    public Processo findById(Integer id) {
         Optional<Processo> processo = repository.findById(id);
         return processo.orElseThrow(() -> new ObjectNotFoundException("Processo não encontrado! ID:" + id));
     }
@@ -45,18 +45,11 @@ public class ProcessoService {
 
         Processo processo = new Processo();
 
-        validamodalidade(processo, processoDto.getModalidade());
-        try {
-            processo.setModalidade(Modalidade.toEnum(processoDto.getModalidade()));
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        }
+        Processo statusProcesso = processo.toStatusProcesso(processoDto.getStatus());
+        processo.setStatus(statusProcesso.getStatus());
 
-        try {
-            processo.setStatus(Status.toEnum(processoDto.getStatus()));
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        }
+        Processo modalidadeProcesso = processo.toModalidadeProcesso(processoDto.getModalidade());
+        processo.setModalidade(modalidadeProcesso.getModalidade());
 
         processo.setTitulo(processoDto.getTitulo());
         processo.setObservacao(processoDto.getObservacao());
@@ -69,18 +62,32 @@ public class ProcessoService {
 
     public Processo update(Integer id, ProcessoDto processoDto) {
         processoDto.setId(id);
-        Processo processoOld = this.findByID(id);
+        Processo processoOld = this.findById(id);
 
         processoOld = new Processo();
+        processoOld.setDataInicio(processoDto.getDataInicio());
+        processoOld.setDataFim(processoDto.getDataFim());
 
-        validamodalidade(processoOld, processoDto.getModalidade());
+        Processo statusProcesso = processoOld.toStatusProcesso(processoDto.getStatus());
+        processoOld.setStatus(statusProcesso.getStatus());
+
+        Processo modalidadeProcesso = processoOld.toModalidadeProcesso(processoDto.getModalidade());
+        processoOld.setModalidade(modalidadeProcesso.getModalidade());
+
+        processoOld.setTitulo(processoDto.getTitulo());
+        processoOld.setObservacao(processoDto.getObservacao());
+
+        Optional<Tecnico> tecnico = tecnicoRepository.findById(processoDto.getTecnico());
+        processoOld.setTecnico(tecnico.get());
+
+        Optional<Cliente> cliente = clienteRepository.findById(processoDto.getCliente());
+        processoOld.setCliente(cliente.get());
+
+        return repository.save(processoOld);
     }
 
-    private void validamodalidade(Object<T> object, Integer modalidadeCodigo){
-        try {
-            object.setModalidade(Modalidade.toEnum(modalidadeCodigo));
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        }
+    public void delete(Integer id) {
+        repository.deleteById(id);
     }
+
 }

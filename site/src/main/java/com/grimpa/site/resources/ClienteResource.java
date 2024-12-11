@@ -41,8 +41,8 @@ public class ClienteResource {
 
     @GetMapping
     public ResponseEntity<List<ClienteDto>> findAll() {
-        List<Cliente> cliente = service.findAll();
-        return ResponseEntity.ok().body(cliente.stream().map(ClienteDto::new).collect(Collectors.toList()));
+        List<Cliente> clientes = service.findAll();
+        return ResponseEntity.ok().body(clientes.stream().map(ClienteDto::new).collect(Collectors.toList()));
     }
 
     @DeleteMapping(value = "/{id}")
