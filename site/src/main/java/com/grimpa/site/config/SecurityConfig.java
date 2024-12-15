@@ -2,13 +2,14 @@ package com.grimpa.site.config;
 
 import com.grimpa.site.security.JWTUtil;
 import com.grimpa.site.security.JwtAuthenticationFilter;
+import com.grimpa.site.security.JwtAuthorizationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
+import org.springframework.security.config.annotation.authentication.configuration.EnableGlobalAuthentication;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -25,7 +26,7 @@ import java.util.Arrays;
 
 @Configuration
 @EnableWebSecurity
-@EnableMethodSecurity
+@EnableGlobalAuthentication
 public class SecurityConfig {
     private static final String[] PUBLIC_MATCHERS = {"/h2-console/**"};
 
@@ -57,6 +58,7 @@ public class SecurityConfig {
                         .anyRequest().authenticated())
                 .authenticationManager(authenticationManager)
                 .addFilter(new JwtAuthenticationFilter(authenticationManager, jwtUtil))
+                .addFilter(new JwtAuthorizationFilter(authenticationManager, jwtUtil, userDetailsService))
                 .sessionManagement((sessionManagerCustomizer) -> sessionManagerCustomizer
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .build();
