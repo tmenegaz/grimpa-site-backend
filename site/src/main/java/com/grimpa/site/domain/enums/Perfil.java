@@ -11,14 +11,6 @@ public enum Perfil {
         this.descricao = descricao;
     }
 
-    public Integer getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(Integer codigo) {
-        this.codigo = codigo;
-    }
-
     public static Perfil toEnum(Integer codigo) {
         if (codigo == null) return null;
 
@@ -30,5 +22,17 @@ public enum Perfil {
         } catch (IllegalAccessException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public Integer getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getDescricao() {
+        return descricao;
     }
 }
