@@ -6,6 +6,7 @@ import com.grimpa.site.services.TecnicoService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -20,6 +21,7 @@ public class TecnicoResource {
     @Autowired
     private TecnicoService service;
 
+    @PreAuthorize("hasAnyRole('ADMIN')")
     @PostMapping
     public ResponseEntity<TecnicoDto> create(@Valid @RequestBody TecnicoDto tecnicoDto) {
         Tecnico tecnico = service.create(tecnicoDto);
@@ -27,10 +29,18 @@ public class TecnicoResource {
         return ResponseEntity.created(uri).build();
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN')")
     @PutMapping(value = "/{id}")
     public ResponseEntity<TecnicoDto> update(@PathVariable Integer id, @RequestBody TecnicoDto tecnicoDto ) {
         Tecnico tecnico = service.update(id, tecnicoDto);
         return ResponseEntity.ok().body(new TecnicoDto(tecnico));
+    }
+
+    @PreAuthorize("hasAnyRole('ADMIN')")
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<TecnicoDto> delete(@PathVariable Integer id) {
+        service.delete(id);
+        return ResponseEntity.noContent().build();
     }
 
     @GetMapping(value = "/{id}")
@@ -43,11 +53,5 @@ public class TecnicoResource {
     public ResponseEntity<List<TecnicoDto>> findAll() {
         List<Tecnico> tecnicos = service.findAll();
         return ResponseEntity.ok().body(tecnicos.stream().map(TecnicoDto::new).collect(Collectors.toList()));
-    }
-
-    @DeleteMapping(value = "/{id}")
-    public ResponseEntity<TecnicoDto> delete(@PathVariable Integer id) {
-        service.delete(id);
-        return ResponseEntity.noContent().build();
     }
 }
