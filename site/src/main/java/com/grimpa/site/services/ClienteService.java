@@ -9,6 +9,7 @@ import com.grimpa.site.services.exceptions.DataIntegrityViolationException;
 import com.grimpa.site.services.exceptions.ObjectNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,8 +24,12 @@ public class ClienteService {
     @Autowired
     private PessoaRepository pessoaRepository;
 
+     @Autowired
+    private BCryptPasswordEncoder encoder;
+
     public Cliente create(ClienteDto clienteDto) {
         clienteDto.setId(null);
+        clienteDto.setSenha(encoder.encode(clienteDto.getSenha()));
         validaByCpfAndEmail(clienteDto);
         Cliente cliente = new Cliente(clienteDto);
         return repository.save(cliente);
